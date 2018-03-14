@@ -5,7 +5,7 @@ import { CartItem } from "../restaurant-detail/shopping-cart/cart-item.model";
 @Injectable()
 export class OrderService {
 
-    constructor(private carteService: ShoppingCartService){
+      constructor(private carteService: ShoppingCartService){
 
     }
 
@@ -23,6 +23,10 @@ export class OrderService {
 
     remove(item: CartItem){
         this.carteService.removeItem(item)
+    }
+
+    itemsValue(): number {
+       return this.carteService.total()
     }
 
 }
