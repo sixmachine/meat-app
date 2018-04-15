@@ -8,9 +8,9 @@ import { Restaurant } from './restaurant.model'
   templateUrl: './restaurant.component.html',
   animations: [
     trigger('restaurantAppeared', [
-      state('ready', style({opacity: 1})),
-      transition('void => ready',[
-        style({opacity: 0, transform: 'translate(-30px, -10px)'}),
+      state('ready', style({ opacity: 1 })),
+      transition('void => ready', [
+        style({ opacity: 0, transform: 'translate(-30px, -10px)' }),
         animate('500ms 0s ease-in-out')
       ])
 
