@@ -11,28 +11,28 @@ import { MEAT_API } from '../app.api'
 @Injectable()
 export class OrderService {
 
-    constructor(private carteService: ShoppingCartService, private http: HttpClient) {
+    constructor(private cartService: ShoppingCartService, private http: HttpClient) {
 
     }
 
     cartItems(): CartItem[] {
-        return this.carteService.items;
+        return this.cartService.items;
     }
 
     increaseQty(item: CartItem) {
-        this.carteService.increaseQty(item);
+        this.cartService.increaseQty(item);
     }
 
     decreaseQty(item: CartItem) {
-        this.carteService.decreaseQty(item);
+        this.cartService.decreaseQty(item);
     }
 
     remove(item: CartItem) {
-        this.carteService.removeItem(item)
+        this.cartService.removeItem(item)
     }
 
     itemsValue(): number {
-        return this.carteService.total()
+        return this.cartService.total()
     }
 
     checkOrder(order: Order): Observable<string> {
@@ -41,7 +41,7 @@ export class OrderService {
     }
 
     clear(): any {
-        this.carteService.clear()
+        this.cartService.clear()
     }
 
 }
