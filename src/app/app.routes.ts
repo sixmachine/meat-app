@@ -7,10 +7,13 @@ import { ReviewsComponent } from './restaurant-detail/reviews/reviews.component'
 import { OrderComponent } from './order/order.component'
 import { OrderSummaryComponent } from './order-summary/order-summary.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { LoginComponent } from './security/login/login.component';
+
 
 
 export const ROUTES: Routes = [
   { path: '', component: HomeComponent },
+  { path: 'login', component: LoginComponent },
   { path: 'about', loadChildren: './about/about.module#AboutModule' },
   { path: 'restaurants', component: RestaurantsComponent },
   {
