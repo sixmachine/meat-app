@@ -8,7 +8,7 @@ import 'rxjs/add/operator/do'
 @Injectable()
 export class LoginService {
 
-    private user: User
+    public user: User
 
     constructor(private http: HttpClient) { }
 
