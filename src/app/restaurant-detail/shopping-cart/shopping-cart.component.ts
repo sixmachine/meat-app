@@ -5,6 +5,7 @@ import { trigger, state, style, transition, animate, keyframes } from '@angular/
 @Component({
   selector: 'mt-shopping-cart',
   templateUrl: './shopping-cart.component.html',
+  preserveWhitespaces: true,
   animations: [
     trigger('row', [
       state('ready', style({ opacity: 1 })),
@@ -17,7 +18,7 @@ import { trigger, state, style, transition, animate, keyframes } from '@angular/
         style({ opacity: 1, transform: 'translateX(0px)', offset: 0 }),
         style({ opacity: 0.8, transform: 'translateX(-10px)', offset: 0.2 }),
         style({ opacity: 0, transform: 'translateX(30px)', offset: 1 }),
-      ]))),      
+      ]))),
     ])
   ]
 })
